@@ -1,7 +1,60 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+}
+
 header {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  /* width: 100%; */
+  width: 1198px;
+  height: 36px;
+  margin-top: 30px;
 }
 
 .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+}
+
+.create-button {
+  background-color: blue;
+  color: #fff;
+  font-size: 20px;
+  padding: 5px 25px;
+  border: none;
+  border-radius: 20px;
+}
+
+/* 전체 input 필드 스타일 */
+.search-input {
+  margin: 30px 0px;
+  padding: 10px 50px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  width: 1199px;
+  height: 55px;
+}
+
+/* placeholder 텍스트 스타일 */
+.search-input::placeholder {
+  color: #999; /* 회색 */
+  font-style: italic; /* 이탤릭체 */
+}
+
+/* 포커스 시 placeholder 스타일 변경 예시 */
+.search-input:focus::placeholder {
+  color: #aaa;
+}
+
+.list {
+  display: grid;
 }
