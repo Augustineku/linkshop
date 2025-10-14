@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-
 import "./App.css";
 import Gallery from "./Gallery.jsx";
 
@@ -34,7 +33,7 @@ function App() {
           />
         </div>
 
-        <div>
+        <div className="list">
           {linkShops.map((item) => (
             <Gallery
               key={item.id}
