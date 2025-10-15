@@ -2,11 +2,10 @@ import { useState, useEffect } from "react";
 import "./App.css";
 import Gallery from "./Gallery.jsx";
 import CreateLinkShop from "./CreateLinkShop.jsx";
+import { Link } from "react-router-dom";
 
 function App() {
   const [linkShops, setLinkshops] = useState([]);
-  // 2. 폼/모달 표시 상태 추가
-  const [isCreating, setIsCreating] = useState(false);
 
   useEffect(() => {
     fetch("https://linkshop-api.vercel.app/19-10/linkshops")
@@ -15,11 +14,6 @@ function App() {
         setLinkshops(data.list);
       });
   }, []);
-
-  // 3. '생성하기' 버튼 클릭 핸들러
-  const handleCreateButtonClick = () => {
-    setIsCreating(true); // 폼/모달 열기
-  };
 
   // 4. 새 샵 생성 핸들러 (API 호출 로직은 여기에 구현되어야 함)
   const handleCreateLinkShop = (newShopData) => {
@@ -56,12 +50,13 @@ function App() {
       <div className="container">
         <header>
           <h1>LINKSHOP</h1>
-          <button
+          {/* <button
             className="create-button"
             onClick={handleCreateButtonClick} // 3. 이벤트 핸들러 연결
           >
-            <a>생성하기</a>
-          </button>
+            
+          </button> */}
+          <Link to={"/"}>생성하기</Link>
         </header>
 
         <div>
@@ -85,14 +80,6 @@ function App() {
           ))}
         </div>
       </div>
-
-      {/* 5. isCreating 상태에 따라 컴포넌트 표시 */}
-      {isCreating && (
-        <CreateLinkShop
-          onCreateLinkShop={handleCreateLinkShop}
-          onClose={() => setIsCreating(false)} // 닫기 함수 전달
-        />
-      )}
     </>
   );
 }

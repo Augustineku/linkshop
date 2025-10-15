@@ -4,10 +4,10 @@ import "./linkpost.css";
 /**
  * 새로운 샵을 생성하는 폼 컴포넌트
  * @param {object} props
- * @param {function} props.onlinkpost - 폼 제출 시 호출될 함수 (예: API에 데이터 전송)
+ * @param {function} props.onCreateLinkShop - 폼 제출 시 호출될 함수 (예: API에 데이터 전송)
  * @param {function} props.onClose - 폼을 닫을 때 호출될 함수
  */
-function linkpost({ onlinkpost, onClose }) {
+function CreateLinkShop({ onCreateLinkShop, onClose }) {
   // 폼 필드 상태 관리
   const [name, setName] = useState("");
   const [urlName, setUrlName] = useState("");
@@ -83,4 +83,4 @@ function linkpost({ onlinkpost, onClose }) {
   );
 }
 
-export default linkpost;
+export default CreateLinkShop;
