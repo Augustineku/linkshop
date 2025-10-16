@@ -7,13 +7,13 @@ function Gallery({ name, urlName, likes, productsCount, products }) {
         <div>
           <img />
           <div>
-            <div>{name}</div>
+            <div class="name-title">{name}</div>
             <div>{urlName}</div>
           </div>
         </div>
         <div>{likes}</div>
       </div>
-      <div>대표 상품 {productsCount}</div>
+      <div class="products-title">대표 상품 {productsCount}</div>
       <div>
         {products.map((product) => (
           <img src={product.imageUrl} />

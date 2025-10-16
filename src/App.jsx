@@ -56,7 +56,9 @@ function App() {
           >
             
           </button> */}
-          <Link to={"/"}>생성하기</Link>
+          <Link to={"/post"} className="create-button">
+            생성하기
+          </Link>
         </header>
 
         <div>

@@ -1,10 +1,22 @@
 .gallery {
   width: 587px;
   height: 237px;
+  flex-shrink: 0;
+  border-radius: 25px;
 }
 
 .gallery img {
-  width: 100%;
-  height: 100%;
+  width: 15%;
+  height: 15%;
   object-fit: cover;
+}
+
+.name-title {
+  font-size: 25px;
+  font-weight: 800;
+}
+
+.products-title {
+  font-size: 20px;
+  font-weight: 500;
 }
